@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+    <defs>
+        <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <!-- Smartphone Outline -->
+    <rect x="4" y="2" width="12" height="20" rx="2" ry="2" stroke="url(#grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="10" y1="18" x2="10.01" y2="18" stroke="url(#grad)" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Wrench Overlay -->
+    <path d="M14.7 8.3a4.2 4.2 0 0 0-5.9-1.1L5 11l2 2 1.3-1.3a4.2 4.2 0 0 0 5.9.1l.5-1.5-2-2z" fill="url(#grad)"/>
+    <path d="M19 14l-4-4" stroke="url(#grad)" stroke-width="2" stroke-linecap="round"/>
+    <path d="M19 14l2.5 2.5a2.12 2.12 0 0 1-3 3L16 17" stroke="url(#grad)" stroke-width="2" stroke-linecap="round"/>
+</svg>

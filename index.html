@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MobileERP - Premium Mobile Sales & Service SaaS</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+    <!-- Login Screen -->
+    <div id="login-screen" class="auth-wrapper" style="display: none;">
+        <div class="auth-glass-panel">
+            <div class="auth-header">
+                <div class="logo">
+                    <i data-lucide="smartphone"></i>
+                    <span class="gradient-text">MobileERP</span>
+                </div>
+                <h2>Welcome Back</h2>
+                <p>Sign in to manage your mobile business</p>
+            </div>
+            <form id="login-form">
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <div class="input-icon">
+                        <i data-lucide="mail"></i>
+                        <input type="email" id="email" required placeholder="name@mobileserp.com">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Password</label>
+                    <div class="input-icon">
+                        <i data-lucide="lock"></i>
+                        <input type="password" id="password" required placeholder="••••••••">
+                    </div>
+                </div>
+                <div class="form-options">
+                    <label class="checkbox">
+                        <input type="checkbox" id="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-link">Forgot password?</a>
+                </div>
+                <button type="submit" class="btn-primary btn-block">Sign In</button>
+            </form>
+            <div class="demo-credentials">
+                <p>Demo Credentials</p>
+                <div class="cred-buttons">
+                    <button class="btn-cred" data-role="admin">Admin</button>
+                    <button class="btn-cred" data-role="sales">Sales</button>
+                    <button class="btn-cred" data-role="tech">Tech</button>
+                </div>
+            </div>
+        </div>
+        <div class="auth-background">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </div>
+
+    <!-- Main App Screen -->
+    <div id="app-screen" class="app-layout" style="display: flex;">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i data-lucide="smartphone"></i>
+                    <span class="gradient-text">MobileERP</span>
+                </div>
+                <button id="sidebar-toggle" class="btn-icon-subtle"><i data-lucide="menu"></i></button>
+            </div>
+            <div class="sidebar-scroll">
+                <nav class="sidebar-nav" id="sidebar-nav">
+                    <!-- Navigation inserted by JS -->
+                </nav>
+            </div>
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <img src="https://i.pravatar.cc/150?img=11" alt="User" class="avatar">
+                    <div class="user-info">
+                        <h4 id="current-user-name">Admin User</h4>
+                        <span id="current-user-role">Administrator</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="topbar">
+                <div class="search-bar">
+                    <i data-lucide="search"></i>
+                    <input type="text" placeholder="Search customers, IMEI, invoices...">
+                    <div class="shortcut-hint">Ctrl+K</div>
+                </div>
+                <div class="topbar-actions">
+                    <button class="btn-icon" id="theme-toggle" title="Toggle Dark/Light Mode">
+                        <i data-lucide="moon"></i>
+                    </button>
+                    <button class="btn-icon notification-btn" id="notif-toggle">
+                        <i data-lucide="bell"></i>
+                        <span class="badge pulse">3</span>
+                    </button>
+
+                    <div class="user-menu-trigger">
+                        <img src="https://i.pravatar.cc/150?img=11" alt="User" class="avatar-small">
+                        <i data-lucide="chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dynamic View Container -->
+            <div id="view-container" class="view-container">
+                <!-- Content rendered here via JS -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+    
+    <!-- Modals Container -->
+    <div id="modals-container"></div>
+
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
